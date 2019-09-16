@@ -16,7 +16,7 @@ git은 최대한 가볍게 유지하는 특성을 갖고 있어 이전버전과 
 
 ![git commit3](./images/git%20commit3.png)
 <br>
-> #git branch
+># git branch
 
 우선 branch는 _하나의 커밋과 그 부모 커밋들을 포함하는 작업 내역_ 이라고 알아 두고, 예제를 봅니다.
 
@@ -38,8 +38,8 @@ _이는 (*)가 master를 가르키고 있어, 현재 브랜치가 master에 있�
 *git checkout newImage; git commit;*
  
 ![git branch3](./images/git%20checkout.png)
-
-> #git merge
+<br>
+># git merge
 
 따로 생성된 브랜치들을 합치는 명령어인 *merge*
 
