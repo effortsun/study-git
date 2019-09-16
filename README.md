@@ -157,7 +157,7 @@ git에서 작업한 내용 되돌리기
 
 ![git reset3](./images/git%20reset3.png)
 
->#git revert
+># git revert
 
 ![git revert](./images/git%20revert.PNG)
 
