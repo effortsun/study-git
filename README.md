@@ -81,3 +81,102 @@ master가 그대로 남아있는데, master를 선택하고 **git rebase bugFix*
 결과는 아래와 같이 깔끔하게 정리가 됩니다.
 
 ![git rebase4](./images/git%20rebase4.png)
+<br>
+<br>
+
+
+># git HEAD
+
+HEAD란 현재 체크아웃된 커밋을 가르키는 것으로, 현재 작업중인 커밋을 말합니다.  
+**HEAD는 항상 작업트리의 가장 최근 커밋을 가리키며**, 작업트리에 변화를 주는 git 명령어들은 대부분 HEAD를 변경하는 것으로 시작됩니다.
+
+![git HEAD](./images/git%20HEAD.png)
+
+HEAD 분리하기, HEAD를 분리하는 것은 _HEAD를 브랜치 대신 특정 커밋에 붙이는 것_ 을 의미합니다.  
+일반적으로 HEAD는 브랜치를 가리키는데, 명령을 사용하기 전 모습은  
+**HEAD -> master -> C1** 인데,  
+_git checkout C1_ 을 하게 되면 **HEAD -> C1** 과 같이 가리키게 됩니다.  
+
+![git HEAD2](./images/git%20HEAD2.png)
+<br>
+<br>
+
+># 상대참조
+
+Git의 상대참조란 우리가 기억하는 지점(브랜치나 HEAD)을 기준을 기준으로 **다른 지점으로 이동**하는 작업을 말합니다.  
+여기서는 **한 커밋 위로 올리는 ^**, **한번에 여러커밋을 올리는 ~<num>** 연산이 있습니다.
+
+![git ref](./images/git%20상대참조1.png)
+<br><br>
+![git ref2](./images/git%20상대참조2.png)
+
+이렇게 C2를 가르키는 master 브랜치에서 한 커밋 위로 이동하고 싶다면,
+
+![git ref3](./images/git%20ref3.png)
+
+**git checkout master^**  
+C1으로 HEAD가 이동한걸 볼 수 있습니다. 또한 **git checkout master^^** 를 통해 부모의 부모 커밋으로 이동도 가능합니다.
+
+![git ref4](./images/git%20ref4.png)
+
+상대 참조는 브랜치 이름 외에도 HEAD를 통해서도 이동이 가능합니다.  
+**git checkout HEAD^**
+
+![git ref5](./images/git%20ref5.png)
+
+이렇게 ^ 연산자를 통해 계속 올라갈 수도 있지만 한번에 올라가는 갯수를 지정해주는 **~ 연산자**도 있습니다.
+
+![git tild](./images/git%20tild.png)
+
+![git tild2](./images/git%20tild2.png)
+
+__git checkout HEAD~4__
+
+![git tild3](./images/git%20tild3.png)
+
+**브랜치 강제로 옮기기**
+
+-f 옵션을 통해 브랜치를 특정 커밋에 직접 재지정 할 수 있습니다.
+
+![git -f option](./images/git%20-f%20option.png)
+
+**git branch -f master HEAD~3**
+
+![git -f option2](./images/git%20-f%20option2.png)
+
+![git -f option3](./images/git%20-f%20option3.png)
+<br><br>
+># git reset
+git에서 작업한 내용 되돌리기 
+
+![git reset](./images/git%20reset.png)
+
+
+**git reset HEAD~1**
+
+![git reset2](./images/git%20reset2.png)
+
+![git reset3](./images/git%20reset3.png)
+
+###git revert
+
+![git revert](./images/git%20revert.PNG)
+
+### push 한 상태라면 revert, 아니라면 reset
+
+#> git cherry-pick
+
+특정 커밋들을 가져온다.
+
+![git cherry-pick](./images/git%20cherry-pick.png)
+
+master 브랜치(현재 C5 커밋)에서 C2와 C4의 커밋을 가져오고 싶다.  
+**git cherry-pick C2 C4**
+
+![git cherry-pick2](./images/git%20cherry-pick2.png)
+
+이런식으로 가져오게 됩니다.
+
+![git cherry-pick3](./images/git%20cherry-pick3.png)
+
+__참조 사이트__  [Learn git Branching 사이트로 Git 기본 개념 다지기](https://huiyu.tistory.com/entry/Learn-Git-Branching%EC%82%AC%EC%9D%B4%ED%8A%B8%EB%A1%9C-Git-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%EB%8B%A4%EC%A7%80%EA%B8%B0-main)
