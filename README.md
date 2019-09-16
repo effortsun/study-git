@@ -114,7 +114,7 @@ Git의 상대참조란 우리가 기억하는 지점(브랜치나 HEAD)을 기�
 
 ![git ref3](./images/git%20ref3.png)
 
-**git checkout master^**  
+**git checkout  master^**  
 C1으로 HEAD가 이동한걸 볼 수 있습니다. 또한 **git checkout master^^** 를 통해 부모의 부모 커밋으로 이동도 가능합니다.
 
 ![git ref4](./images/git%20ref4.png)
@@ -124,7 +124,7 @@ C1으로 HEAD가 이동한걸 볼 수 있습니다. 또한 **git checkout master
 
 ![git ref5](./images/git%20ref5.png)
 
-이렇게 ^ 연산자를 통해 계속 올라갈 수도 있지만 한번에 올라가는 갯수를 지정해주는 **~ 연산자**도 있습니다.
+이렇게 ^ 연산자를 통해 계속 올라갈 수도 있지만 한번에 올라가는 갯수를 지정해주는 **~연산자**도 있습니다.
 
 ![git tild](./images/git%20tild.png)
 
