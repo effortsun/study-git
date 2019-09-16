@@ -111,7 +111,7 @@ Git의 상대참조란 우리가 기억하는 지점(브랜치나 HEAD)을 기�
 
 이렇게 C2를 가르키는 master 브랜치에서 한 커밋 위로 이동하고 싶다면,
 
-![git ref3](./images/git%20ref3.png)
+<center>![git ref3](./images/git%20ref3.png)</center>
 
 **git checkout  master^**  
 C1으로 HEAD가 이동한걸 볼 수 있습니다. 또한 **git checkout master^^** 를 통해 부모의 부모 커밋으로 이동도 가능합니다.
