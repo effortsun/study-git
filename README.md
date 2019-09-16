@@ -1,3 +1,4 @@
+<p align="center">
 
 ># git commit
 git commit은 디렉토리에 있는 파일들의 변경사항을 기록하는 것을 말한다.  
@@ -180,3 +181,5 @@ master 브랜치(현재 C5 커밋)에서 C2와 C4의 커밋을 가져오고 싶�
 ![git cherry-pick3](./images/git%20cherry-pick3.png)
 
 __참조 사이트__  [Learn git Branching 사이트로 Git 기본 개념 다지기](https://huiyu.tistory.com/entry/Learn-Git-Branching%EC%82%AC%EC%9D%B4%ED%8A%B8%EB%A1%9C-Git-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%EB%8B%A4%EC%A7%80%EA%B8%B0-main)
+
+</p>
